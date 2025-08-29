@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 阿黎二维码工坊</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+        body {
+            margin: 0; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color); color: var(--text-color);
+            display: flex; justify-content: center; align-items: flex-start;
+        }
+        .container {
+            width: 100%; max-width: 800px; margin: 20px;
+            background: var(--card-background); border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow); padding: 30px 40px; box-sizing: border-box;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #f0f2f5;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .profile-info h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+        .profile-info p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        .qr-code-section {
+            text-align: center;
+        }
+        .qr-code-section img {
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+            border: 1px solid #eee;
+            padding: 5px;
+        }
+
+        .home-link {
+            display: inline-block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>关于我</h1>
+        <p>
+            你好，我是阿黎。目前从事传统行业的工作，但内心一直是一个互联网的深度爱好者。我喜欢钻研和学习各种有趣的网络技术和工具，并热衷于把复杂的事情变得简单、高效。
+        </p>
+        <p>
+            创建这个“阿黎二维码工坊”，最初只是我的一个个人项目，目的是为了给自己和朋友提供一个没有广告干扰、不用担心隐私泄露的二维码生成工具。后来我发现，很多人都有同样的需求，于是我决定把它分享出来，希望能帮助到更多的人。
+        </p>
+        <p>
+            虽然我不是专业的互联网从业者，但我会从一个普通用户的角度出发，不断优化这个小工具的体验。我的目标是让它一直保持<strong>免费、简洁和安全</strong>。
+        </p>
+
+        <!-- 个人信息展示 -->
+        <div class="profile">
+            <!-- 【请替换】将 "your-avatar.jpg" 替换成您自己的头像图片文件名，并放到 assets 文件夹 -->
+            <img src="assets/avatar.jpg" alt="阿黎的头像">
+            <div class="profile-info">
+                <h3>阿黎</h3>
+                <!-- 【可选】您可以写上您的城市 -->
+                <p>湖南 岳阳</p>
+            </div>
+        </div>
+
+        <h2>联系我</h2>
+        <p>
+            如果您在使用过程中遇到任何问题，或者有好的想法和建议，非常欢迎您通过下面的方式联系我。您的每一个反馈都是我改进的动力！
+        </p>
+
+        <!-- 联系方式 -->
+        <div class="qr-code-section">
+            <p><strong>电子邮箱:</strong> <a href="mailto:l3092923@gmail.com">l3092923@gmail.com</a></p>
+
+            <!-- 【请替换】将 "your-wechat-qr.png" 替换成您自己的微信二维码图片，并放到 assets 文件夹 -->
+            <p>或者，通过微信扫码联系我：</p>
+            <img src="assets/wechat.png" alt="微信联系方式">
+        </div>
+
+        <a href="index.html" class="home-link">&laquo; 返回首页</a>
+    </div>
+</body>
+</html>

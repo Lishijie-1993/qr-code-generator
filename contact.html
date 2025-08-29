@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系阿黎</title>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --background-color: #f0f2f5;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
+        }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            padding: 40px 30px;
+            width: 90%;
+            max-width: 380px;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            margin: -90px auto 20px; /* 半径+边框，实现头像悬浮效果 */
+            display: block;
+        }
+        h1 {
+            margin: 0;
+            color: var(--text-color);
+        }
+        .phone-number {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: #28a745; /* 绿色，更像拨号按钮 */
+            font-size: 1.2em;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .footer-link {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .footer-link a {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 【请替换】将 "avatar.jpg" 替换成您的头像图片，并确保它在 assets 文件夹中 -->
+        <img src="assets/avatar.jpg" alt="阿黎的头像" class="avatar">
+        
+        <h1 id="contact-name">阿黎</h1>
+        
+        <p id="phone-display" class="phone-number">正在加载号码...</p>
+        
+        <a id="call-btn" href="#" class="btn">一键拨号</a>
+
+        <div class="footer-link">
+            由 <a href="/" target="_blank">阿黎二维码工坊</a> 生成
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // 从URL中获取电话号码参数
+            const params = new URLSearchParams(window.location.search);
+            const phoneNumber = params.get('phone');
+
+            if (phoneNumber) {
+                // 更新页面上显示的电话号码
+                document.getElementById('phone-display').innerText = phoneNumber;
+                // 更新“一键拨号”按钮的链接
+                document.getElementById('call-btn').href = 'tel:' + phoneNumber;
+            } else {
+                document.getElementById('phone-display').innerText = '无效的号码';
+            }
+        };
+    </script>
+
+</body>
+</html>
